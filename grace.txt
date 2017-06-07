@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<script type="text/javascript">
+
+function download()
+{
+var b=window.prompt("type the name of the picture to view in fullsize mode in jpeg formart");
+if(b!=="")
+{
+var a = document.createElement('a');
+var linkText = document.createTextNode(" are you sure you want to view " + b + " ?");
+a.appendChild(linkText);
+a.title = "image full size view";
+a.href = (b+".jpg");
+document.body.appendChild(a);
+}
+else 
+{
+alert("you must type an image name in the prompt box, the image should be jpeg");
+var b=window.prompt("type the name of the picture to view in fullsize mode in jpeg formart");
+if(b!=="")
+{
+var a = document.createElement('a');
+var linkText = document.createTextNode("are you sure you want to view " + b + " ?");
+a.appendChild(linkText);
+a.title = "image full size view";
+a.href = (b+".jpg");
+document.body.appendChild(a);
+}
+}
+}
+</script>
+<body>
+<input type="button" id="dwn-btn" value="View an Image?" onclick="download()"/>
+</body>
+</html>
